@@ -1,0 +1,14 @@
+{
+  "poll_interval_seconds": 1.0,
+  "sensitive_clean_after_minutes": 2,
+  "normal_retain_days": 14,
+  "max_entries": 500,
+  "patterns": {
+    "credit_card": "\\b(?:\\d[ -]*?){13,16}\\b",
+    "api_key_generic": "\\b(sk|pk|AKIA|ghp|xox[baprs])[A-Za-z0-9_-]{10,}\\b",
+    "jwt": "\\beyJ[A-Za-z0-9_-]+\\.[A-Za-z0-9_-]+\\.[A-Za-z0-9_-]+\\b",
+    "password_label": "(?i)\\bpassword\\s*[:=]\\s*\\S+",
+    "private_key_block": "-----BEGIN [A-Z ]*PRIVATE KEY-----",
+    "ssh_key": "\\bssh-(rsa|ed25519) [A-Za-z0-9+/=]{20,}"
+  }
+}
